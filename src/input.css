@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  touch-action: none;
+}
+
+@layer components {
+  .dark-bg-primary {
+    @apply bg-zinc-100 dark:bg-zinc-900;
+  }
+
+  .dark-bg-secondary {
+    @apply bg-zinc-300 dark:bg-zinc-800;
+  }
+
+  .dark-text-title {
+    @apply font-semibold text-black dark:text-white;
+  }
+
+  .light-text-title {
+    @apply font-semibold text-white dark:text-black;
+  }
+
+  .dark-text-normal {
+    @apply text-zinc-600 dark:text-zinc-400;
+  }
+
+  .light-text-normal {
+    @apply text-zinc-400 dark:text-zinc-600;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #27272a;
+  }
+}
